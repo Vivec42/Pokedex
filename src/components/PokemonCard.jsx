@@ -4,7 +4,7 @@ function PokemonCard(props) {
   return (
     <figure>
       {props.pokemon.imgSrc ? (
-        <img src={props.pokemon.imgSrc} alt="rip" />
+        <img src={props.pokemon.imgSrc} alt="" />
       ) : (
         <p>???</p>
       )}
