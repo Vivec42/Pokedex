@@ -31,15 +31,13 @@ const pokemonList = [
 
 function App() {
   const [currentPokemonIndex, setCurrentPokemonIndex] = useState(0);
+  const handleClick = (index) => {
+    setCurrentPokemonIndex(index);
+  };
   const currentPokemon = pokemonList[currentPokemonIndex];
-
   return (
     <div className="App">
-      <NavBar
-        currentPokemonIndex={currentPokemonIndex}
-        setCurrentPokemonIndex={setCurrentPokemonIndex}
-        pokemonList={pokemonList}
-      />
+      <NavBar pokemonList={pokemonList} handleClick={handleClick} />
       <PokemonCard pokemon={currentPokemon} />
     </div>
   );
